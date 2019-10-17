@@ -25,6 +25,7 @@ public class wanderingScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //if(agent.)
         timer += Time.deltaTime;
 
         if (timer >= wanderTimer)
