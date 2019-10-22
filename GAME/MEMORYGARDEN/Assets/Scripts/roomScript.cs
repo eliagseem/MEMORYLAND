@@ -20,7 +20,9 @@ public class roomScript : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject == Player)
+        Debug.Log("collision");
+
+        if(collision.gameObject.tag == "Player")
         {
             transform.position = new Vector3(-122.5786f, 0, 0);
         }

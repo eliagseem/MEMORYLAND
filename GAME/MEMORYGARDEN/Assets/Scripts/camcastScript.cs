@@ -23,7 +23,7 @@ public class camcastScript : MonoBehaviour
             {
                 Transform objectHit = hit.transform;
 
-                if(objectHit.gameObject.tag == "NPC")
+                if (objectHit.gameObject.tag == "NPC")
                 {
                     //clicked on NPC
                     //make NPC face player
@@ -31,6 +31,10 @@ public class camcastScript : MonoBehaviour
                     var agent = objectHit.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
                     agent.isStopped = true;
 
+                }
+                else if (objectHit.gameObject.tag == "Door")
+                {
+                    this.transform.position = new Vector3(-122.5786f, 5, 0);
                 }
             }
         }

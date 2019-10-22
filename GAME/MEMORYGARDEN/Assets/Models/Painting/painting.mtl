@@ -1,0 +1,11 @@
+# Material file for painting.obj
+
+newmtl wire_227153153
+	Ns 32
+	d 1
+	illum 2
+	Kd 0.8902 0.6 0.6
+	Ks 0.35 0.35 0.35
+	Ka 0.8902 0.6 0.6
+	map_Kd freinds_pic02.png
+

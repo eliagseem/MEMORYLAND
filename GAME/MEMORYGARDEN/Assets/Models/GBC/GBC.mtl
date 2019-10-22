@@ -1,0 +1,58 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 20.04.2019 14:53:27
+
+newmtl VMtl103
+	Ns 1.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9961 0.9961 0.9961
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka BA94E99_c.png
+	map_Kd BA94E99_c.png
+
+newmtl VMtl104
+	Ns 1.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.8633 0.8633 0.8633
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka 1BF16B3E_c.png
+	map_Kd 1BF16B3E_c.png
+
+newmtl VMtl102
+	Ns 1.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9961 0.9961 0.9961
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka 40DECFF6_c.png
+	map_Kd 40DECFF6_c.png
+
+newmtl VMtl105
+	Ns 1.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.9961 0.9961 0.9961
+	Kd 0.7000 0.7000 0.7000
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka 7F43800A_c.png
+	map_Kd 7F43800A_c.png

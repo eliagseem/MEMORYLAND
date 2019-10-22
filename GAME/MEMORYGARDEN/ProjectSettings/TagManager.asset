@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NPC
   - Interactible
+  - Door
   layers:
   - Default
   - TransparentFX
