@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class npcScript : MonoBehaviour
+public class npcScriptOld : MonoBehaviour
 {
     private Rigidbody rb;
     private Animator anim;

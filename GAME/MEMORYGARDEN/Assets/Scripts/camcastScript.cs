@@ -25,11 +25,21 @@ public class camcastScript : MonoBehaviour
 
                 if (objectHit.gameObject.tag == "NPC")
                 {
-                    //clicked on NPC
-                    //make NPC face player
-                    //play their dialogue audio clip
-                    var agent = objectHit.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
-                    agent.isStopped = true;
+                    if (objectHit.gameObject.GetComponent<npcScript>().isWandering)
+                    {
+                        //clicked on NPC
+                        //make NPC face player
+                        //play their dialogue audio clip
+                        var npc = objectHit.gameObject;
+                        var agent = objectHit.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
+                        npc.GetComponent<npcScript>().stopWandering();
+                        npc.GetComponent<npcScript>().talkToPlayer();
+                    }
+                    else
+                    {
+                        var npc = objectHit.gameObject;
+                        npc.GetComponent<npcScript>().startWandering();
+                    }
 
                 }
                 else if (objectHit.gameObject.tag == "Door")
