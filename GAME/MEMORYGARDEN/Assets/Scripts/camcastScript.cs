@@ -5,6 +5,9 @@ using UnityEngine;
 public class camcastScript : MonoBehaviour
 {
     public Camera camera;
+    public Transform guide;
+    private bool isHoldingObject = false;
+    private GameObject pickedUpObj;
 
     void Start()
     {
@@ -27,8 +30,6 @@ public class camcastScript : MonoBehaviour
                 {
                     if (objectHit.gameObject.GetComponent<npcScript>().isWandering)
                     {
-                        //clicked on NPC
-                        //make NPC face player
                         //play their dialogue audio clip
                         var npc = objectHit.gameObject;
                         var agent = objectHit.gameObject.GetComponent<UnityEngine.AI.NavMeshAgent>();
@@ -40,13 +41,35 @@ public class camcastScript : MonoBehaviour
                         var npc = objectHit.gameObject;
                         npc.GetComponent<npcScript>().startWandering();
                     }
-
                 }
                 else if (objectHit.gameObject.tag == "Door")
                 {
                     this.transform.position = new Vector3(-122.5786f, 5, 0);
                 }
+                else if (objectHit.gameObject.tag == "DesiredObject")
+                {
+                    pickedUpObj = objectHit.gameObject;
+
+                    if (isHoldingObject)
+                    {
+                        isHoldingObject = false;
+                        pickedUpObj.GetComponent<Rigidbody>().useGravity = true;
+                        pickedUpObj.transform.SetParent(null);
+                        pickedUpObj = null;
+                    }
+                    else
+                    {
+                        objectHit.gameObject.transform.SetParent(guide);
+                        isHoldingObject = true;
+                        objectHit.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                    }
+                }
             }
+        }
+
+        if (isHoldingObject)
+        {
+            pickedUpObj.transform.position = guide.position;
         }
     }
 }

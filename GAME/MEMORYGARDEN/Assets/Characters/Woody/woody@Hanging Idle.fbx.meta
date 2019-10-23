@@ -1,29 +1,12 @@
 fileFormatVersion: 2
-guid: 3c2a4885742a3bd4f8c07990f451ef7d
+guid: c65087f2e23c6924eb3489d477ce4db6
 ModelImporter:
   serializedVersion: 26
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: VMtl102
-    second: {fileID: 2100000, guid: 6093120c0e2a6be40aee7ce3a1ad681c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: VMtl103
-    second: {fileID: 2100000, guid: 5e71f5832d90fbe4296d68cd78e757cd, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: VMtl104
-    second: {fileID: 2100000, guid: 0ac04411b2cccfa46af89f0fabf3fabe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: VMtl105
-    second: {fileID: 2100000, guid: b44c56fc18554ad46a309d91f676a8b0, type: 2}
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -107,7 +90,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
