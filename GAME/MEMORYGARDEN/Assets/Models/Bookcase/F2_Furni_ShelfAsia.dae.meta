@@ -3,7 +3,22 @@ guid: 372ab1eb788ffab488c05546a45a52e1
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Shadow_mat
+    second: {fileID: 2100000, guid: 62f3600b769935f449aa550fb39f5f36, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShelfAsia2_mat
+    second: {fileID: 2100000, guid: f5061e95440d8b24e86beadca29867cc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ShelfAsia_mat
+    second: {fileID: 2100000, guid: c0c4f6ffc3215f44d862a7f36075195c, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
