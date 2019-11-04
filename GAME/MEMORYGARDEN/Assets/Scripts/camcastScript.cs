@@ -49,19 +49,22 @@ public class camcastScript : MonoBehaviour
                 else if (objectHit.gameObject.tag == "DesiredObject")
                 {
                     pickedUpObj = objectHit.gameObject;
+                    var rb = pickedUpObj.GetComponent<Rigidbody>();
 
                     if (isHoldingObject)
                     {
                         isHoldingObject = false;
-                        pickedUpObj.GetComponent<Rigidbody>().useGravity = true;
+                        rb.constraints = RigidbodyConstraints.None;
+                        rb.useGravity = true;
                         pickedUpObj.transform.SetParent(null);
                         pickedUpObj = null;
                     }
                     else
                     {
-                        objectHit.gameObject.transform.SetParent(guide);
+                        pickedUpObj.transform.SetParent(guide);
                         isHoldingObject = true;
-                        objectHit.gameObject.GetComponent<Rigidbody>().useGravity = false;
+                        rb.useGravity = false;
+                        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
                     }
                 }
             }

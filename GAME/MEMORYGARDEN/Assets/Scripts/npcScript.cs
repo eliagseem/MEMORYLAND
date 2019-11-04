@@ -9,10 +9,15 @@ public class npcScript : MonoBehaviour
     public float wanderRadius;
     public float wanderTimer;
     public bool isWandering = true;
+    public GameObject dialogBox;
+    public string[] randomThoughts = new string[5];
+    public string[] desireThoughts = new string[5];
 
+    private bool isTalking = false;
     private Transform target;
     private UnityEngine.AI.NavMeshAgent agent;
     private float timer;
+    private float talkTimer;
 
     // Use this for initialization
     void OnEnable()
@@ -20,14 +25,19 @@ public class npcScript : MonoBehaviour
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         timer = wanderTimer;
         anim = GetComponent<Animator>();
-        //InvokeRepeating("RandomAnim", 2f, 2F);
     }
 
     // Update is called once per frame
     void Update()
     {
         if(isWandering)
-        timer += Time.deltaTime;
+            timer += Time.deltaTime;
+
+        if (isTalking)
+            talkTimer += Time.deltaTime;
+
+        if(talkTimer >= 5)
+            startWandering();
 
         if (timer >= wanderTimer && isWandering)
         {
@@ -35,8 +45,8 @@ public class npcScript : MonoBehaviour
             agent.SetDestination(newPos);
             anim.SetBool("isIdle", false);
             anim.SetBool("isWalking", true);
-            anim.SetBool("isMagic", false);
             timer = 0;
+            dialogBox.GetComponent<TextMesh>().text = string.Empty;
         }
 
         // Check if we've reached the destination
@@ -48,7 +58,12 @@ public class npcScript : MonoBehaviour
                 {
                     anim.SetBool("isIdle", true);
                     anim.SetBool("isWalking", false);
-                    anim.SetBool("isMagic", false);
+
+                    if (!isTalking)
+                    {
+                        var index = Random.Range(0, 5);
+                        dialogBox.GetComponent<TextMesh>().text = randomThoughts[index];
+                    }
                 }
             }
         }
@@ -87,5 +102,9 @@ public class npcScript : MonoBehaviour
         anim.SetBool("isIdle", false);
         anim.SetBool("isWalking", false);
         anim.SetBool("isTalking", true);
+
+        var index = Random.Range(0, 5);
+        dialogBox.GetComponent<TextMesh>().text = desireThoughts[index];
+        isTalking = true;
     }
 }
