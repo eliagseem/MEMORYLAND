@@ -17,6 +17,11 @@ public class camcastScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(pickedUpObj == null)
+        {
+            isHoldingObject = false;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
@@ -64,6 +69,8 @@ public class camcastScript : MonoBehaviour
                         pickedUpObj.transform.SetParent(guide);
                         isHoldingObject = true;
                         rb.useGravity = false;
+                        rb.velocity = Vector3.zero;
+                        rb.angularVelocity = Vector3.zero;
                         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
                     }
                 }

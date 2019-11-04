@@ -12,16 +12,20 @@ public class npcScript : MonoBehaviour
     public GameObject dialogBox;
     public string[] randomThoughts = new string[5];
     public string[] desireThoughts = new string[5];
+    public GameObject desiredObject;
 
     private bool isTalking = false;
+    private bool isThinking = false;
     private Transform target;
     private UnityEngine.AI.NavMeshAgent agent;
     private float timer;
     private float talkTimer;
+    private AudioSource audioSource;
 
     // Use this for initialization
     void OnEnable()
     {
+        audioSource = GetComponent<AudioSource>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         timer = wanderTimer;
         anim = GetComponent<Animator>();
@@ -41,6 +45,7 @@ public class npcScript : MonoBehaviour
 
         if (timer >= wanderTimer && isWandering)
         {
+            isThinking = false;
             Vector3 newPos = RandomNavSphere(transform.position, wanderRadius, -1);
             agent.SetDestination(newPos);
             anim.SetBool("isIdle", false);
@@ -59,10 +64,11 @@ public class npcScript : MonoBehaviour
                     anim.SetBool("isIdle", true);
                     anim.SetBool("isWalking", false);
 
-                    if (!isTalking)
+                    if (!isTalking && !isThinking)
                     {
                         var index = Random.Range(0, 5);
                         dialogBox.GetComponent<TextMesh>().text = randomThoughts[index];
+                        isThinking = true;
                     }
                 }
             }
@@ -106,5 +112,16 @@ public class npcScript : MonoBehaviour
         var index = Random.Range(0, 5);
         dialogBox.GetComponent<TextMesh>().text = desireThoughts[index];
         isTalking = true;
+        audioSource.Play();
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "DesiredObject" && collision.gameObject == desiredObject)
+        {
+            Destroy(collision.gameObject);
+            //play a sound now that the character got the object
+            audioSource.Play();
+        }
     }
 }
