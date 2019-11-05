@@ -13,13 +13,18 @@ public class npcScript : MonoBehaviour
     public string[] randomThoughts = new string[5];
     public string[] desireThoughts = new string[5];
     public GameObject desiredObject;
+    public Camera cutsceneCamera;
+    public Camera mainCamera;
 
+    public GameObject particleSys;
     private bool isTalking = false;
     private bool isThinking = false;
     private Transform target;
     private UnityEngine.AI.NavMeshAgent agent;
     private float timer;
     private float talkTimer;
+    private float victoryTimer;
+    private bool desiresMet = false;
     private AudioSource audioSource;
 
     // Use this for initialization
@@ -40,8 +45,23 @@ public class npcScript : MonoBehaviour
         if (isTalking)
             talkTimer += Time.deltaTime;
 
-        if(talkTimer >= 5)
+        if (desiresMet)
+        {
+            victoryTimer += Time.deltaTime;
+           // this.GetComponent<Rigidbody>().useGravity = false;\
+            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            //this.transform.Translate(new Vector3(0, 1, 0));
+        }
+
+        if (talkTimer >= 5)
             startWandering();
+
+        if(victoryTimer >= 10)
+        {
+            cutsceneCamera.enabled = false;
+            mainCamera.enabled = true;
+            particleSys.SetActive(false);
+        }
 
         if (timer >= wanderTimer && isWandering)
         {
@@ -64,7 +84,7 @@ public class npcScript : MonoBehaviour
                     anim.SetBool("isIdle", true);
                     anim.SetBool("isWalking", false);
 
-                    if (!isTalking && !isThinking)
+                    if (!isTalking && !isThinking && !desiresMet)
                     {
                         var index = Random.Range(0, 5);
                         dialogBox.GetComponent<TextMesh>().text = randomThoughts[index];
@@ -95,6 +115,7 @@ public class npcScript : MonoBehaviour
 
     public void startWandering()
     {
+        talkTimer = 0;
         agent.isStopped = false;
         isWandering = true;
         anim.SetBool("isTalking", false);
@@ -122,6 +143,13 @@ public class npcScript : MonoBehaviour
             Destroy(collision.gameObject);
             //play a sound now that the character got the object
             audioSource.Play();
+            anim.SetTrigger("isDancing");
+            stopWandering();
+            particleSys.SetActive(true);
+            cutsceneCamera.enabled = true;
+            mainCamera.enabled = false;
+            desiresMet = true;
+            dialogBox.GetComponent<TextMesh>().text = "";
         }
     }
 }
