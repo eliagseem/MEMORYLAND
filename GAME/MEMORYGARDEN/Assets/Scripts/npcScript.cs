@@ -30,6 +30,7 @@ public class npcScript : MonoBehaviour
     // Use this for initialization
     void OnEnable()
     {
+        cutsceneCamera.enabled = false;
         audioSource = GetComponent<AudioSource>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         timer = wanderTimer;
