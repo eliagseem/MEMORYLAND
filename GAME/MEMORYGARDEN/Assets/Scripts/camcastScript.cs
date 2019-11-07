@@ -8,6 +8,7 @@ public class camcastScript : MonoBehaviour
     public Transform guide;
     private bool isHoldingObject = false;
     private GameObject pickedUpObj;
+    public GameObject spawnMarker;
 
     void Start()
     {
@@ -49,7 +50,7 @@ public class camcastScript : MonoBehaviour
                 }
                 else if (objectHit.gameObject.tag == "Door")
                 {
-                    this.transform.position = new Vector3(-122.5786f, 5, 0);
+                    this.transform.position = spawnMarker.transform.position;
                 }
                 else if (objectHit.gameObject.tag == "DesiredObject")
                 {
