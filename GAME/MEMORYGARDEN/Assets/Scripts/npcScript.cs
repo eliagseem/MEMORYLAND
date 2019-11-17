@@ -15,6 +15,7 @@ public class npcScript : MonoBehaviour
     public GameObject desiredObject;
     public Camera cutsceneCamera;
     public Camera mainCamera;
+    public GameObject successItem;
 
     public GameObject particleSys;
     private bool isTalking = false;
@@ -49,19 +50,23 @@ public class npcScript : MonoBehaviour
         if (desiresMet)
         {
             victoryTimer += Time.deltaTime;
-           // this.GetComponent<Rigidbody>().useGravity = false;\
-            this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            //this.transform.Translate(new Vector3(0, 1, 0));
+            //this.GetComponent<Rigidbody>().useGravity = false;
+            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+            //transform.position = new Vector3(transform.position.x, transform.position.y + (2 * Time.deltaTime), transform.position.z);
         }
 
         if (talkTimer >= 5)
             startWandering();
 
-        if(victoryTimer >= 10)
+        if(victoryTimer >= 10 && desiresMet)
         {
             cutsceneCamera.enabled = false;
             mainCamera.enabled = true;
             particleSys.SetActive(false);
+            anim.SetBool("isDancing", false);
+            Instantiate(successItem, transform.position, transform.rotation);
+            desiresMet = false;
+            Destroy(this.gameObject);
         }
 
         if (timer >= wanderTimer && isWandering)
@@ -144,8 +149,8 @@ public class npcScript : MonoBehaviour
             Destroy(collision.gameObject);
             //play a sound now that the character got the object
             audioSource.Play();
-            anim.SetTrigger("isDancing");
             stopWandering();
+            anim.SetBool("isDancing", true);
             particleSys.SetActive(true);
             cutsceneCamera.enabled = true;
             mainCamera.enabled = false;

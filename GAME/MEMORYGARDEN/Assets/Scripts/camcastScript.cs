@@ -75,6 +75,11 @@ public class camcastScript : MonoBehaviour
                         rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ | RigidbodyConstraints.FreezeRotationY;
                     }
                 }
+                else if (objectHit.gameObject.tag == "Helper")
+                {
+                    var helper = objectHit.gameObject;
+                    helper.GetComponent<helperScript>().revealItem();
+                }
             }
         }
 

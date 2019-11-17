@@ -9,6 +9,9 @@ TagManager:
   - Door
   - DesiredObject
   - Dialogue
+  - Fire
+  - Flower
+  - Helper
   layers:
   - Default
   - TransparentFX

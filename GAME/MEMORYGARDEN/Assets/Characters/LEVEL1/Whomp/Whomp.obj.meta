@@ -3,7 +3,52 @@ guid: 75a159764cb29da48b2f663595251c27
 ModelImporter:
   serializedVersion: 26
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.071_Whomp_grp.png
+    second: {fileID: 2100000, guid: 07f2ce70de40c3146a82ed28434dc16b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.072_Whomp_grp.png
+    second: {fileID: 2100000, guid: d6e72d0964a5fb945a540c59f5574c21, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.073_Whomp_grp.png
+    second: {fileID: 2100000, guid: 2cb52a1852fc6e14c842301549f210ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.074_Whomp_grp.png
+    second: {fileID: 2100000, guid: 7e995c1e1762f8949a4df05efd2fbeeb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.075_Whomp_grp.png
+    second: {fileID: 2100000, guid: 7794b3a7ec316e4489888ed4b0b3e12c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.076_Whomp_grp.png
+    second: {fileID: 2100000, guid: 8f99a96f3b1d7b948becc78d0705bf5c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.077_Whomp_grp.png
+    second: {fileID: 2100000, guid: ed6c183d74aadd34aabf5ee894103ec4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.084_Whomp_grp.png
+    second: {fileID: 2100000, guid: fc5f5714ba34bf843a934d9c6dee292f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.085_Whomp_grp.png
+    second: {fileID: 2100000, guid: 8d6c2aea6f248254a9c4d076d05545ce, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
