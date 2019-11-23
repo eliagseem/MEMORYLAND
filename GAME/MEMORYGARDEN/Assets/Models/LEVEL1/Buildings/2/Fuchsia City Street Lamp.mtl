@@ -1,0 +1,32 @@
+newmtl lambert87
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert87.png
+map_Kd lambert87.png
+map_d lambert87.png
+newmtl lambert88
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert88.png
+map_Kd lambert88.png
+map_d lambert88.png
+newmtl sktk_sl2
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka sktk_sl2.png
+map_Kd sktk_sl2.png
+map_d sktk_sl2.png
+newmtl sktk_sl3
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka sktk_sl3.png
+map_Kd sktk_sl3.png
+map_d sktk_sl3.png

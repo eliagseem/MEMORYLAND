@@ -1,0 +1,32 @@
+newmtl lambert2
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka lambert2.png
+map_Kd lambert2.png
+map_d lambert2.png
+newmtl mado
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka mado.png
+map_Kd mado.png
+map_d mado.png
+newmtl pasted___kage
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 0.2903226
+Tr 0.2903226
+map_Ka pasted___kage.png
+map_Kd pasted___kage.png
+map_d pasted___kage.png
+newmtl tn_h01_02
+Ka 0.972549 0.972549 0.972549
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka tn_h01_02.png
+map_Kd tn_h01_02.png
+map_d tn_h01_02.png
