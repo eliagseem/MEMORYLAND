@@ -13,7 +13,11 @@ UPDATES:
 - Moving away from beta environment to implementing the first level. Goal for the 27th is to have one fully implemented level with NPCs, a decorated environment and the ability to unlock the second level.
 - Game idea solidifed: Each level is themed to a piece of old media, with the NPCs and environment made to be reminiscent of that piece of media with disturbances, glitches and slightly off things. The next level is unlocked when each NPC receives their desired item and "ascends" out of the level. Other levels will always be in sight, just blocked by doors or obstacles, a la Banjo Tooie.
 
+27 NOVEMBER
+- Finished implementing level 2 unlock mechanics and general game management
+- Fixed bugs with unclickable NPCs
+- Started working on HUB world unlocking the second level
+
 To do:
-- Fully populate first level with props and 2 more NPCs
-- Complete level unlocking mechanic after all NPCs have received their items, revealing the next level/world
-- Have the HUB room/world (reception area) change depending on how far the player has progressed
+- Expand HUB world to be more expansive, have different areas that open up as you unlock levels to indicate progression
+- Eventually move away from licensed models (Nintendo, etc)
