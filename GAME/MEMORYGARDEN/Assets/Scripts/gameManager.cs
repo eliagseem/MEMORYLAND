@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
 
         }
 
-        if (charRemains.Length == 0 && !level1Complete)
+        if (charRemains.Length == 3 && !level1Complete)
         {
             raiseBalloon = true;
             //level 1 complete, trigger cutscene of balloon raising up and a door appearing in the hub world

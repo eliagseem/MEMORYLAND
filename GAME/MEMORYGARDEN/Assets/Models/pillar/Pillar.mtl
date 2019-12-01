@@ -1,0 +1,24 @@
+newmtl d15_pillar01
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka d15_pillar01.png
+map_Kd d15_pillar01.png
+map_d d15_pillar01.png
+newmtl d15_pillar02
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka d15_pillar02.png
+map_Kd d15_pillar02.png
+map_d d15_pillar02.png
+newmtl d15_pillar03
+Ka 0 0 0
+Kd 0.7843137 0.7843137 0.7843137
+d 1
+Tr 1
+map_Ka d15_pillar03.png
+map_Kd d15_pillar03.png
+map_d d15_pillar03.png
