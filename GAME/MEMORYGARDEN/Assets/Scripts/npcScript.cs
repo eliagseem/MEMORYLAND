@@ -16,8 +16,12 @@ public class npcScript : MonoBehaviour
     public Camera cutsceneCamera;
     public Camera mainCamera;
     public GameObject successItem;
-
+    public AudioClip[] voiceClips = new AudioClip[5];
     public GameObject particleSys;
+    public AudioClip deathSound;
+    public AudioSource musicSource;
+    public AudioClip victorySound;
+
     private bool isTalking = false;
     private bool isThinking = false;
     private Transform target;
@@ -48,18 +52,15 @@ public class npcScript : MonoBehaviour
             talkTimer += Time.deltaTime;
 
         if (desiresMet)
-        {
             victoryTimer += Time.deltaTime;
-            //this.GetComponent<Rigidbody>().useGravity = false;
-            //this.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
-            //transform.position = new Vector3(transform.position.x, transform.position.y + (2 * Time.deltaTime), transform.position.z);
-        }
 
         if (talkTimer >= 5)
             startWandering();
 
         if(victoryTimer >= 10 && desiresMet)
         {
+            audioSource.clip = deathSound;
+            audioSource.Play();
             cutsceneCamera.enabled = false;
             mainCamera.enabled = true;
             particleSys.SetActive(false);
@@ -94,6 +95,8 @@ public class npcScript : MonoBehaviour
                     {
                         var index = Random.Range(0, 5);
                         dialogBox.GetComponent<TextMesh>().text = randomThoughts[index];
+                        audioSource.clip = voiceClips[index];
+                        audioSource.Play();
                         isThinking = true;
                     }
                 }
@@ -139,6 +142,7 @@ public class npcScript : MonoBehaviour
         var index = Random.Range(0, 5);
         dialogBox.GetComponent<TextMesh>().text = desireThoughts[index];
         isTalking = true;
+        audioSource.clip = voiceClips[index];
         audioSource.Play();
     }
 
@@ -147,8 +151,10 @@ public class npcScript : MonoBehaviour
         if(collision.gameObject.tag == "DesiredObject" && collision.gameObject == desiredObject)
         {
             Destroy(collision.gameObject);
-            //play a sound now that the character got the object
+            audioSource.clip = voiceClips[4];
             audioSource.Play();
+            musicSource.clip = victorySound;
+            musicSource.Play();
             stopWandering();
             anim.SetBool("isDancing", true);
             particleSys.SetActive(true);

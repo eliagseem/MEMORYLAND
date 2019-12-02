@@ -18,6 +18,9 @@ public class GameManager : MonoBehaviour
     public GameObject level2Spawn;
     public GameObject marioHead;
     public GameObject IntroHall;
+    public AudioSource musicSource;
+    public AudioClip level1transition;
+    public AudioClip rumbling;
 
     private float timer;
     private float level2timer;
@@ -86,6 +89,8 @@ public class GameManager : MonoBehaviour
             level1Complete = true;
             level1UnlockCamera.GetComponent<CameraShake>().enabled = true;
             //play rumbling sound
+            musicSource.clip = rumbling;
+            musicSource.Play();
         }
 
     }
@@ -97,5 +102,7 @@ public class GameManager : MonoBehaviour
         mainCamera.enabled = false;
         balloonCamera.enabled = true;
         //play short song
+        musicSource.clip = level1transition;
+        musicSource.Play();
     }
 }
