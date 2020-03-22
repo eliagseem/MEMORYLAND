@@ -1,7 +1,7 @@
 fileFormatVersion: 2
 guid: 28452f60424b2e044b956d16c298746a
 ModelImporter:
-  serializedVersion: 26
+  serializedVersion: 19300
   internalIDToNameTable:
   - first:
       1: 100000
@@ -31,7 +31,7 @@ ModelImporter:
       name: Material.001
     second: {fileID: 2100000, guid: 642cad0c8635ac548b665d2b604f7072, type: 2}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 0
@@ -95,13 +95,12 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips:
-  - 583dc015648b04a46a97fc1b10f80da5
   - 76403b2483d9f4b45a1c556ed9ee3485
+  - 583dc015648b04a46a97fc1b10f80da5
   - 2657c2425f6e2e34b9ac96ee45dae54c
   - 966ae7ebf57ed4044b89a494237c635c
   - 943d6a30d4d0f9246af51e4f467eee7a
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
@@ -124,8 +123,10 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 3
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
