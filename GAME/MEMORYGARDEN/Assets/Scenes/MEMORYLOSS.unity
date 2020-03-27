@@ -18908,7 +18908,7 @@ GameObject:
   m_Component:
   - component: {fileID: 896409269}
   - component: {fileID: 896409268}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: POST
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18930,8 +18930,8 @@ MonoBehaviour:
   sharedProfile: {fileID: 11400000, guid: 2067442d207fe8d4686368882e4d1087, type: 2}
   isGlobal: 1
   blendDistance: 0
-  weight: 0.9
-  priority: 92.06
+  weight: 1
+  priority: 30
 --- !u!4 &896409269
 Transform:
   m_ObjectHideFlags: 0
@@ -31178,7 +31178,7 @@ MonoBehaviour:
   volumeTrigger: {fileID: 1496841601}
   volumeLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 1
   antialiasingMode: 0
