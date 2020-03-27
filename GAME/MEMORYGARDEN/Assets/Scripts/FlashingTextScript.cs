@@ -5,12 +5,12 @@ using UnityEngine.EventSystems;
 
 public class FlashingTextScript : MonoBehaviour
 {
-    Text flashingText;
+    TMPro.TextMeshProUGUI flashingText;
     public float flashTimer = .5f;
 
     void Start()
     {
-        flashingText = GetComponent<Text>();
+        flashingText = GetComponent<TMPro.TextMeshProUGUI>();
 
         StartCoroutine(BlinkText());
     }

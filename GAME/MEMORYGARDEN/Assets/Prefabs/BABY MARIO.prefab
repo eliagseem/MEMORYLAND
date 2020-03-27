@@ -1107,6 +1107,7 @@ GameObject:
   - component: {fileID: 6515224159467561250}
   - component: {fileID: 6515224159467561248}
   - component: {fileID: 6515224159467561249}
+  - component: {fileID: 1958407324360763778}
   m_Layer: 0
   m_Name: DialogueBox
   m_TagString: Dialogue
@@ -1146,7 +1147,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4191f8ce5afc91b4f82ae0058daf60bb, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1185,10 +1186,23 @@ TextMesh:
   m_FontSize: 0
   m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 12800000, guid: 8a833e4adf5e7744f82cd105d0f2cecd, type: 3}
+  m_Font: {fileID: 12800000, guid: 4191f8ce5afc91b4f82ae0058daf60bb, type: 3}
   m_Color:
     serializedVersion: 2
     rgba: 4278190080
+--- !u!114 &1958407324360763778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6515224159467561251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7896dd321f5289469d47bee85e44cc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textMeshTransform: {fileID: 6515224159467561250}
 --- !u!1 &6515224159629971426
 GameObject:
   m_ObjectHideFlags: 0
