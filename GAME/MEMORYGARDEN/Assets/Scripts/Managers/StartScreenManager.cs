@@ -7,6 +7,7 @@ public class StartScreenManager : MonoBehaviour
 {
     public AudioSource soundSource;
     public AudioClip selectionSound;
+    public GameObject flashingText;
 
     private float timer;
     private bool selectionMade = false;
@@ -19,7 +20,8 @@ public class StartScreenManager : MonoBehaviour
             soundSource.Play();
             selectionMade = true;
 
-            //change text animation for press start
+            //flash text faster to indicate selection
+            flashingText.GetComponent<FlashingTextScript>().flashTimer = .1f;
         }
 
         //wait for the sound effect and animation to finish
