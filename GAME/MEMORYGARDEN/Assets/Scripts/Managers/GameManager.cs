@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public AudioSource musicSource;
     public AudioClip level1transition;
     public AudioClip rumbling;
+    public GameObject videoPlayer;
 
     private float timer;
     private float level2timer;
@@ -72,11 +73,15 @@ public class GameManager : MonoBehaviour
         {
             movingToLevel2 = false;
             level2timer = 0;
-            balloonCamera.enabled = false;
-            mainCamera.enabled = true;
-            player.transform.position = level2Spawn.transform.position;
-            IntroHall.GetComponent<HallUnlockScript>().UnlockLevel2();
 
+            //fade out here and play a video, then go to main menu scene
+
+            videoPlayer.GetComponent<UnityEngine.Video.VideoPlayer>().Play();
+
+            //balloonCamera.enabled = false;
+            //mainCamera.enabled = true;
+            //player.transform.position = level2Spawn.transform.position;
+            //IntroHall.GetComponent<HallUnlockScript>().UnlockLevel2();
         }
 
         if (charRemains.Length == 3 && !level1Complete)
