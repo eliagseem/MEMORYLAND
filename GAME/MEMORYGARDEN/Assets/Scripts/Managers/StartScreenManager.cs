@@ -14,7 +14,7 @@ public class StartScreenManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKey)
+        if (Input.anyKey && !selectionMade)
         {
             soundSource.clip = selectionSound;
             soundSource.Play();
