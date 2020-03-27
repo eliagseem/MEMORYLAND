@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Intros + Start Screen.unity
+    guid: 6994f0f741e91b441995c6304a8142b8
+  - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 0bc17577eca8bfa4f8b75d4d36dda037
+  - enabled: 1
+    path: Assets/Scenes/MEMORYLOSS.unity
+    guid: 40a7c89507716bd4aa57745bcb24adf0
   m_configObjects: {}

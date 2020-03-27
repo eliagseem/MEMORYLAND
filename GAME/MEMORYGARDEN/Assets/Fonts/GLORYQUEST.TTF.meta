@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 8a833e4adf5e7744f82cd105d0f2cecd
+guid: 4191f8ce5afc91b4f82ae0058daf60bb
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -13,7 +13,7 @@ TrueTypeFontImporter:
   - GloryQuest
   fallbackFontReferences: []
   customCharacters: 
-  fontRenderingMode: 0
+  fontRenderingMode: 3
   ascentCalculationMode: 1
   useLegacyBoundsCalculation: 0
   shouldRoundAdvanceValue: 1
