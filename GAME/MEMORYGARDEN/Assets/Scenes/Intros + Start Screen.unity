@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 301b086864273e24cac87d387069943e, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 8694a846d2897a9469888ebe23c2d963, type: 2}
 --- !u!1 &232938291
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,6 +643,7 @@ MonoBehaviour:
   soundSource: {fileID: 442176899}
   selectionSound: {fileID: 8300000, guid: 3c89937e8d353d24f94a0738a83d2a67, type: 3}
   flashingText: {fileID: 1642453633}
+  videoPlayer: {fileID: 1587899332}
 --- !u!1 &1587899331
 GameObject:
   m_ObjectHideFlags: 0
@@ -653,13 +654,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1587899333}
   - component: {fileID: 1587899332}
+  - component: {fileID: 1587899334}
   m_Layer: 0
   m_Name: Intro Logos & Opening Scene
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!328 &1587899332
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -668,7 +670,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1587899331}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 43ffa38ea66c13b4999138b786b890ea, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: 8e2053a600c2d5145894398919d880a8, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 712673897}
@@ -708,6 +710,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1587899334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587899331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a130b770f8e8a4eb3ab4b49267519b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1632994607
 GameObject:
   m_ObjectHideFlags: 0
@@ -1370,7 +1384,7 @@ Transform:
   m_GameObject: {fileID: 2019707627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -0.058631897, y: 0, z: -8.67}
-  m_LocalScale: {x: 50.596554, y: 50.596554, z: 50.596554}
+  m_LocalScale: {x: 14.40737, y: 14.40737, z: 14.40737}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 7
@@ -20176,7 +20190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &6791763198299717377
 Transform:
   m_ObjectHideFlags: 0
@@ -20990,7 +21004,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8023151416480765245
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -8,20 +8,33 @@ public class StartScreenManager : MonoBehaviour
     public AudioSource soundSource;
     public AudioClip selectionSound;
     public GameObject flashingText;
+    public UnityEngine.Video.VideoPlayer videoPlayer;
 
     private float timer;
     private bool selectionMade = false;
+
+    void Start()
+    {
+        videoPlayer.loopPointReached += VideoEnded;
+    }
 
     void Update()
     {
         if (Input.anyKey && !selectionMade)
         {
-            soundSource.clip = selectionSound;
-            soundSource.Play();
-            selectionMade = true;
+            if(Input.GetKeyDown(KeyCode.Escape) && videoPlayer.isPlaying)
+            {
+                videoPlayer.Stop();
+            }
+            else if(!videoPlayer.isPlaying)
+            {
+                soundSource.clip = selectionSound;
+                soundSource.Play();
+                selectionMade = true;
 
-            //flash text faster to indicate selection
-            flashingText.GetComponent<FlashingTextScript>().flashTimer = .1f;
+                //flash text faster to indicate selection
+                flashingText.GetComponent<FlashingTextScript>().flashTimer = .1f;
+            }
         }
 
         //wait for the sound effect and animation to finish
@@ -36,4 +49,10 @@ public class StartScreenManager : MonoBehaviour
             SceneManager.LoadScene("Main Menu");
         }
     }
+
+    void VideoEnded(UnityEngine.Video.VideoPlayer vp)
+    {
+        videoPlayer.Stop();
+    }
+
 }
