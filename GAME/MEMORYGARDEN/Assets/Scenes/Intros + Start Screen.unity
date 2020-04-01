@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 8694a846d2897a9469888ebe23c2d963, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: eca09272c35e0de40980507cf35e296a, type: 2}
 --- !u!1 &232938291
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,6 +846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTimer: 0.5
+  flashingUserText: PRESS ANY BUTTON
 --- !u!114 &1642453636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1197,8 +1198,8 @@ MonoBehaviour:
     (C)SCORPYSIVITY U.S.A., INC. 2000
     ALL RIGHTS RESERVED'
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8c85e3e373ead7344a79e1d416ebb420, type: 2}
-  m_sharedMaterial: {fileID: 6194456035143618039, guid: 8c85e3e373ead7344a79e1d416ebb420,
+  m_fontAsset: {fileID: 11400000, guid: 19296a55224afad4ba93064d2ed48abc, type: 2}
+  m_sharedMaterial: {fileID: 5786066699116299581, guid: 19296a55224afad4ba93064d2ed48abc,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -1224,7 +1225,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 18.5
+  m_fontSize: 28.1
   m_fontSizeBase: 17.3
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1383,7 +1384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019707627}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.058631897, y: 0, z: -8.67}
+  m_LocalPosition: {x: -0.058631897, y: 0, z: 12}
   m_LocalScale: {x: 14.40737, y: 14.40737, z: 14.40737}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1480,6 +1481,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flashTimer: 0.5
+  flashingUserText: 
 --- !u!1 &41827797228730350
 GameObject:
   m_ObjectHideFlags: 0

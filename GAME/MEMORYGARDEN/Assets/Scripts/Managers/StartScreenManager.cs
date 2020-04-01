@@ -20,7 +20,23 @@ public class StartScreenManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.anyKey && !selectionMade)
+        //wait for the sound effect and animation to finish
+        if (selectionMade)
+        {
+            timer += Time.deltaTime;
+        }
+
+        if (timer >= 6)
+        {
+            //load in second scene
+            SceneManager.LoadScene("Main Menu");
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && videoPlayer.isPlaying)
+        {
+            videoPlayer.Stop();
+        }
+        else if(Input.anyKeyDown && !selectionMade)
         {
             if(Input.GetKeyDown(KeyCode.Escape) && videoPlayer.isPlaying)
             {
@@ -35,18 +51,6 @@ public class StartScreenManager : MonoBehaviour
                 //flash text faster to indicate selection
                 flashingText.GetComponent<FlashingTextScript>().flashTimer = .1f;
             }
-        }
-
-        //wait for the sound effect and animation to finish
-        if (selectionMade)
-        {
-            timer += Time.deltaTime;
-        }
-
-        if (timer >= 6)
-        {
-            //load in second scene
-            SceneManager.LoadScene("Main Menu");
         }
     }
 
