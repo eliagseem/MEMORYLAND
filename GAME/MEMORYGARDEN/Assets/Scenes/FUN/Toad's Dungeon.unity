@@ -424,7 +424,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e0143fa0e20c3ba4ab8458dc98e37a57, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.744
+  m_Volume: 0.512
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1180,7 +1180,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2144337292
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7497,7 +7497,7 @@ GameObject:
   - component: {fileID: 8023151416480765216}
   - component: {fileID: 8023151416480765217}
   m_Layer: 0
-  m_Name: Toad
+  m_Name: TOAD
   m_TagString: NPC
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7516,7 +7516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wanderRadius: 10.3
-  wanderTimer: 10
+  wanderTimer: 5
   isWandering: 1
   dialogBox: {fileID: 4972802130566621578}
   randomThoughts:
@@ -7542,7 +7542,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ba2c998c3fbc62c41933186f64562d3a, type: 3}
   particleSys: {fileID: 4972802131287334680}
   deathSound: {fileID: 0}
-  musicSource: {fileID: 0}
+  musicSource: {fileID: 442176899}
   victorySound: {fileID: 0}
 --- !u!1 &8029429349652046147
 GameObject:

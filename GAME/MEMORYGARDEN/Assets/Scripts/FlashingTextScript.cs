@@ -7,6 +7,7 @@ public class FlashingTextScript : MonoBehaviour
 {
     TMPro.TextMeshProUGUI flashingText;
     public float flashTimer = .5f;
+    public string flashingUserText;
 
     void Start()
     {
@@ -23,7 +24,7 @@ public class FlashingTextScript : MonoBehaviour
         {
             flashingText.text = "";
             yield return new WaitForSeconds(flashTimer);
-            flashingText.text = "PRESS ANY BUTTON";
+            flashingText.text = flashingUserText;
             yield return new WaitForSeconds(flashTimer);
         }
     }
