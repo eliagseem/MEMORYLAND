@@ -39,6 +39,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey("escape"))
+        {
+            //bring up pause menu
+        }
+
         _systemTime = System.DateTime.Now;
         charRemains = GameObject.FindGameObjectsWithTag("Flower");
 

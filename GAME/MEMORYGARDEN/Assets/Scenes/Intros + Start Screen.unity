@@ -641,7 +641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundSource: {fileID: 442176899}
-  selectionSound: {fileID: 8300000, guid: 3c89937e8d353d24f94a0738a83d2a67, type: 3}
+  selectionSound: {fileID: 8300000, guid: 1c4920cf3a10c8c47af5df1b80c770ca, type: 3}
   flashingText: {fileID: 1642453633}
   videoPlayer: {fileID: 1587899332}
 --- !u!1 &1587899331
@@ -1149,7 +1149,7 @@ GameObject:
   - component: {fileID: 1968263748}
   - component: {fileID: 1968263747}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: CREDITS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
