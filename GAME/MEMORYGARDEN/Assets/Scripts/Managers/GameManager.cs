@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public AudioClip level1transition;
     public AudioClip rumbling;
     public GameObject videoPlayer;
+    public GameObject pauseUI;
 
     private float timer;
     private float level2timer;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     private bool movingToLevel2 = false;
     private bool level1Complete = false;
     private bool marioDescends = false;
+    private bool isPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,12 +41,25 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("escape"))
+        if (Input.GetKeyDown(KeyCode.Escape) && !isPaused)
         {
-            //bring up pause menu
+            isPaused = true;
+            pauseUI.SetActive(true);
+            Time.timeScale = 1.0f - Time.timeScale;
+
+        }
+        else if(Input.GetKeyDown(KeyCode.Escape) && isPaused)
+        {
+            isPaused = false;
+            pauseUI.SetActive(false);
+            Time.timeScale = 1.0f;
+        }
+        else if (Input.GetKeyDown(KeyCode.Return) && isPaused)
+        {
+            SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
         }
 
-        _systemTime = System.DateTime.Now;
+        //_systemTime = System.DateTime.Now;
         charRemains = GameObject.FindGameObjectsWithTag("Flower");
 
         if (raiseBalloon)
@@ -79,10 +94,8 @@ public class GameManager : MonoBehaviour
             movingToLevel2 = false;
             level2timer = 0;
 
-            //fade out here and play a video, then go to main menu scene
-
+            //end of demo, play ending video and quit to main menu
             videoPlayer.GetComponent<UnityEngine.Video.VideoPlayer>().Play();
-
             //balloonCamera.enabled = false;
             //mainCamera.enabled = true;
             //player.transform.position = level2Spawn.transform.position;
@@ -98,7 +111,6 @@ public class GameManager : MonoBehaviour
             level1UnlockCamera.enabled = true;
             level1Complete = true;
             level1UnlockCamera.GetComponent<CameraShake>().enabled = true;
-            //play rumbling sound
             musicSource.clip = rumbling;
             musicSource.Play();
         }
@@ -111,7 +123,6 @@ public class GameManager : MonoBehaviour
         movingToLevel2 = true;
         mainCamera.enabled = false;
         balloonCamera.enabled = true;
-        //play short song
         musicSource.clip = level1transition;
         musicSource.Play();
     }
