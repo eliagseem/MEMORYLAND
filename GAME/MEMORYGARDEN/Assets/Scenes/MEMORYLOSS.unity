@@ -2718,7 +2718,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh232914
+  m_Name: pb_Mesh52532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3987,7 +3987,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh232412
+  m_Name: pb_Mesh52030
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10399,7 +10399,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh231636
+  m_Name: pb_Mesh51254
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20667,7 +20667,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh231664
+  m_Name: pb_Mesh51282
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26795,7 +26795,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh230914
+  m_Name: pb_Mesh50532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27156,7 +27156,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh232688
+  m_Name: pb_Mesh52306
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31566,7 +31566,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1496342952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34141,7 +34141,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh231038
+  m_Name: pb_Mesh50656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -36242,13 +36242,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogBox: {fileID: 2038267387}
   randomThoughts:
-  - click on me to talk to me!!
-  - click on me to talk to me!!
-  - click on me to talk to me!!
+  - left mouse button is your action button
+  - hold left shift to sprint!
+  - hold left shift to sprint!
   desireThoughts:
-  - next time you see someone... click on them!!
-  - now click on the door to leave pls.
-  - leave by clicking on the door thx.
+  - hold left shift to sprint!
+  - hold left shift to sprint!
+  - left mouse button is your action button
   helperItem: {fileID: 0}
 --- !u!195 &1708141038
 NavMeshAgent:
@@ -38162,7 +38162,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh230828
+  m_Name: pb_Mesh50446
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2

@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &45056236
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &58373867
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &184754423
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -568,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &433030359
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -834,8 +834,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -849,7 +849,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 712673895}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 38.2, z: -23}
+  m_LocalPosition: {x: 0, y: 5.3, z: -23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6566696040852838685}
@@ -1274,7 +1274,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 8
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1420321393
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20800,7 +20800,7 @@ Canvas:
   serializedVersion: 3
   m_RenderMode: 1
   m_Camera: {fileID: 712673897}
-  m_PlaneDistance: 29.2
+  m_PlaneDistance: 5.9
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
@@ -21061,7 +21061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88cf550f9e8f754cb912cb39a6ea9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 40
+  wanderRadius: 1540
   wanderTimer: 15
   isWandering: 1
   dialogBox: {fileID: 0}
@@ -21939,7 +21939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88cf550f9e8f754cb912cb39a6ea9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 40
+  wanderRadius: 15
   wanderTimer: 15
   isWandering: 1
   dialogBox: {fileID: 4972802130566621578}
@@ -22069,7 +22069,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88cf550f9e8f754cb912cb39a6ea9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wanderRadius: 3599.93
+  wanderRadius: 10
   wanderTimer: 25
   isWandering: 1
   dialogBox: {fileID: 5938156729641527216}

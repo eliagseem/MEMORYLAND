@@ -56,7 +56,8 @@ public class GameManager : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.Return) && isPaused)
         {
-            SceneManager.LoadScene("Main Menu", LoadSceneMode.Single);
+            Time.timeScale = 1.0f;
+            SceneManager.LoadScene("Main Menu");
         }
 
         //_systemTime = System.DateTime.Now;
