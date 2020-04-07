@@ -95,8 +95,13 @@ public class GameManager : MonoBehaviour
             movingToLevel2 = false;
             level2timer = 0;
 
-            //end of demo, play ending video and quit to main menu
+            //if it's the webgl build, assign url to clip because
+            //unity doesn't support asset clips playing... big brane buckos
+            if(Application.platform == RuntimePlatform.WebGLPlayer)
+                videoPlayer.GetComponent<UnityEngine.Video.VideoPlayer>().url = System.IO.Path.Combine(Application.streamingAssetsPath, "mland_ending_streaming.mp4");
+
             videoPlayer.GetComponent<UnityEngine.Video.VideoPlayer>().Play();
+
             //balloonCamera.enabled = false;
             //mainCamera.enabled = true;
             //player.transform.position = level2Spawn.transform.position;

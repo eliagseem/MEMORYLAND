@@ -15,6 +15,12 @@ public class StartScreenManager : MonoBehaviour
 
     void Start()
     {
+        //if it's the webgl build, assign url to clip because
+        //unity doesn't support asset clips playing... big brane buckos
+        if (Application.platform == RuntimePlatform.WebGLPlayer)
+            videoPlayer.url = System.IO.Path.Combine(Application.streamingAssetsPath, "memland_intro_streaming.mp4");
+
+        videoPlayer.Play();
         videoPlayer.loopPointReached += VideoEnded;
     }
 
