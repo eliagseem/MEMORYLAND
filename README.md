@@ -1,15 +1,15 @@
 # MEMORYLAND
-Official page: https://www.aliegseem.com/memoryland
+Official page: https://www.midnitefactory.com/memoryland
 
 ### PLAY IN YOUR BROWSER WITHOUT INSTALLING
-https://eliagseem.github.io/MEMORYLAND/
+https://midnitefactory.github.io/MEMORYLAND/
 
 ## INSTALLERS
 #### WINDOWS 32 BIT (most users)
-https://github.com/eliagseem/MEMORYLAND/raw/master/Build/Installers/MEMLAND_W32Setup.exe
+https://github.com/midnitefactory/MEMORYLAND/raw/master/Build/Installers/MEMLAND_W32Setup.exe
 
 #### WINDOWS 64 BIT
-https://github.com/eliagseem/MEMORYLAND/raw/master/Build/Installers/MEMLAND_W64Setup.exe
+https://github.com/midnitefactory/MEMORYLAND/raw/master/Build/Installers/MEMLAND_W64Setup.exe
 
 ## INSTALL INSTRUCTIONS
 - Download the Github Repository using the menus at the top right.
